@@ -1,5 +1,5 @@
-![GitHub stars](https://img.shields.io/github/stars/r7b7/web-scrybe?style=social)
-[![GitHub Forks](https://img.shields.io/github/forks/r7b7/repo.svg)]()
+[![GitHub stars](https://img.shields.io/github/stars/r7b7/web-scrybe?style=social)
+[![GitHub Forks](https://img.shields.io/github/forks/r7b7/web-scrybe.svg)]()
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![GitHub Issues](https://img.shields.io/github/issues/r7b7/web-scrybe.svg)](https://github.com/r7b7/web-scrybe/issues)
