@@ -2,10 +2,10 @@
 [![GitHub Forks](https://img.shields.io/github/forks/r7b7/web-scrybe.svg)]()
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![GitHub Issues](https://img.shields.io/github/issues/r7b7/web-scrybe.svg)](https://github.com/r7b7/web-scrybe/issues)
 [![Last Commit](https://img.shields.io/github/last-commit/r7b7/web-scrybe.svg)](https://github.com/r7b7/web-scrybe/commits/main)
 [![Powered by Spring Boot](https://img.shields.io/badge/Powered%20by-Spring%20Boot-green)]()
 [![Runs on Docker](https://img.shields.io/badge/Runs%20on-Docker-blue)]()
+[![Wiki](https://img.shields.io/badge/Documentation-Wiki-blue)](https://github.com/r7b7/web-scrybe/wiki/Web%E2%80%90Scrybe-Wiki)
 
 
 
