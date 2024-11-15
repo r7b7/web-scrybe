@@ -125,8 +125,68 @@ web-scrybe is an open-source web scraping tool built using Spring Boot. It provi
           ```bash
           docker ps
 
-Contributing
+# Contributing Guidelines
 Contributions are welcome from the open-source community! Please read the contributing guidelines to get started.
 
-License
-web-scrybe is licensed under the MIT License.
+To maintain code quality and ensure stability, please follow these guidelines before submitting a Pull Request (PR).
+
+1. Fork and Clone the Repository
+   Fork the repository on GitHub.
+   Clone your fork locally
+      ```bash
+      git clone https://github.com/yourusername/yourproject.git
+   
+2. Code Formatting
+   Ensure your code follows the standard Java code style. Use the built-in code formatting feature of your IDE (IntelliJ IDEA, Eclipse, or VS Code).
+
+3. Run Tests Locally
+   Make sure that all existing tests pass before submitting your PR:
+      ```bash
+      ./mvnw test
+
+4. Run SonarQube Analysis (To run Sonarqube in local, please read the section - "Run Sonarqube Locally")
+   Run SonarQube locally to check for code quality issues and ensure the code meets the standards.
+      ```bash
+          mvn clean verify sonar:sonar -Dsonar.login=<YOUR_TOKEN>
+   
+5. Ensure the build is stable
+
+6. Commit Message Guidelines
+   Use meaningful and concise commit messages. Follow this format:
+      ```bash
+      [Type]: Brief description
+      
+      Types can include:
+      
+      feat: New feature
+      fix: Bug fix
+      docs: Documentation changes
+      test: Adding or updating tests
+      refactor: Code refactoring
+      
+7. Creating a Pull Request
+   Before creating a Pull Request, ensure that your branch is up to date with the main branch:
+
+
+8. Code Review Process
+   The PR will be reviewed by maintainers and other contributors. Please be patient and respond to any requested changes.
+   
+### Run Sonarqube Locally
+1. Install Docker
+2. Run the following command
+   ```bash
+   docker run -d --name sonarqube -p 9000:9000 sonarqube
+3. Sonarqube server should be up and running at - http://localhost:9000
+4. To Stop server, use this command
+   ```bash
+   docker stop sonarqube
+5. To run the sonarqube locally, you would need to pass a login token for authentication. Follow these steps to generate the token from your local sonarqube server
+   ```bash
+   1. Go to your SonarQube instance at http://localhost:9000.
+   2. Log in with your admin credentials (admin/admin by default).
+   3. Navigate to My Account > Security > Generate Tokens.
+   4. Enter a token name (e.g., my-project-token) and click Generate.
+
+# Issues
+If you encounter any issues, please open a [discussion](https://github.com/r7b7/r7b7.github.io/issues) or create an issue. We're here to help!
+
