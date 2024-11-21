@@ -20,7 +20,9 @@ web-scrybe is an open-source SERP (Search Engine Results Page) scraping and soci
 - **Easy-to-use API**: Developers can quickly integrate web scraping functionality into their applications using the provided API.
 - **Scalable and Distributed**: The application is designed to be highly scalable and can be deployed in a distributed environment using Docker.
 - **Unlimited Scraping**: The automation-based approach doesn't have the same rate limits or charges as Paid APIs, allowing users to scrape data at scale without facing throttling or downtime.
-- **Docker and Docker Compose Support**: web-scrybe is designed to be easily deployable and scalable using Docker and Docker Compose. This makes it an ideal choice for quick prototyping, development, and production deployments.
+- **Docker and Docker Compose Support**: web-scrybe is designed to be easily deployable and scalable using Docker and Docker Compose. This makes it an ideal choice for quick prototyping, development, and testing environment deployments.
+
+**NB: Search engines may have strict anti-scraping measures, read the terms and conditions before using SERP scraping in production. Social Media web scraping is implemented using official APIs making them good to use in any environment**
 
 ## Getting Started
 
