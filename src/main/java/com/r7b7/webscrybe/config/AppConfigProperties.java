@@ -26,5 +26,7 @@ public class AppConfigProperties {
 
     @Value("${reddit.topic.url.suffix}")
     private String redditTopicUrlSuffix;
-    
+
+    @Value("${duckduckgo.url}")
+    private String duckDuckGoUrl;
 }

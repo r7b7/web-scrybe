@@ -28,6 +28,8 @@ public class DriverServiceFactory {
             return DriverType.GOOGLE;
         } else if (serviceClass == BingSearchService.class) {
             return DriverType.BING;
+        } else if (serviceClass == DuckDuckGoService.class) {
+            return DriverType.DUCKDUCKGO;
         }
         throw new IllegalArgumentException("Unknown driver service type");
     }

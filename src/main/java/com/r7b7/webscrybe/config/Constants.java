@@ -7,4 +7,7 @@ public class Constants {
     public static final String GRANT_TYPE = "grant_type";
     public static final String MULTIPART_FORM_DATA = "multipart/form-data";
     public static final String CLIENT_CREDENTIALS = "client_credentials";
+    public static final String SUCCESS = "Success";
+    public static final String QUERY_ELEMENT = "q";
+    public static final String HREF = "href";
 }

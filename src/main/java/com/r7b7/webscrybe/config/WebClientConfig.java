@@ -16,7 +16,7 @@ import reactor.core.publisher.Mono;
 public class WebClientConfig {
     private final AuthenticationClient authClient;
 
-    @Value("${USER_AGENT}")
+    @Value("${USER_AGENT:no-user-agent}")
     private String userAgent;
 
     public WebClientConfig(AuthenticationClient authClient) {
@@ -27,8 +27,8 @@ public class WebClientConfig {
     public WebClient redditWebClient() {
         return WebClient.builder()
                 .defaultHeaders(headers -> {
-                    headers.set(HttpHeaders.USER_AGENT, userAgent); // Required by Reddit
-                    headers.set(HttpHeaders.CONTENT_LENGTH, "0"); // For GET requests
+                    headers.set(HttpHeaders.USER_AGENT, userAgent); 
+                    headers.set(HttpHeaders.CONTENT_LENGTH, "0"); 
                     headers.set(HttpHeaders.ACCEPT, "application/json");
                 })
                 .filter(authInterceptor())

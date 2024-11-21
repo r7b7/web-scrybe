@@ -24,10 +24,10 @@ public class AuthenticationClient {
     private final TokenStorage tokenStorage;
     private final AppConfigProperties appConfigProperties;
 
-    @Value("${REDDIT_CLIENT_ID}")
+    @Value("${REDDIT_CLIENT_ID:no-client-id}")
     private String clientId;
 
-    @Value("${REDDIT_CLIENT_SECRET}")
+    @Value("${REDDIT_CLIENT_SECRET:no-client-secret}")
     private String clientSecret;
 
     public AuthenticationClient(RestTemplate restTemplate, TokenStorage tokenStorage,AppConfigProperties appConfigProperties) {

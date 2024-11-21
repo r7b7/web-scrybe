@@ -86,7 +86,8 @@
 			**/client/**/*,
 			**/WebSearchApplication.java,
 			**/BingSearchService.java,
-			**/GoogleSearchService.java
+			**/GoogleSearchService.java,
+			**/DuckDuckGoService.java
 		</sonar.coverage.exclusions>
 		<!-- Files to exclude from analysis -->
 		<sonar.exclusions>
@@ -148,6 +149,7 @@
 								<exclude>com/r7b7/webscrybe/*Application.*</exclude>
 								<exclude>com/r7b7/webscrybe/service/*BingSearchService.*</exclude>
 								<exclude>com/r7b7/webscrybe/service/*GoogleSearchService.*</exclude>
+								<exclude>com/r7b7/webscrybe/service/*DuckDuckGoService.*</exclude>
 								
 								<!-- Exclude generated classes -->
 								<exclude>**/generated/**/*</exclude>

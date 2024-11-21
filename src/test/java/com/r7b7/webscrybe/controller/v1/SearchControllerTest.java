@@ -1,12 +1,9 @@
 package com.r7b7.webscrybe.controller.v1;
 
-import static org.mockito.ArgumentMatchers.anyInt;
-import static org.mockito.ArgumentMatchers.anyString;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -19,7 +16,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
-import com.r7b7.webscrybe.controller.v1.SearchController;
+import com.r7b7.webscrybe.model.ApiResponse;
 import com.r7b7.webscrybe.model.DriverType;
 import com.r7b7.webscrybe.model.SearchResponse;
 import com.r7b7.webscrybe.service.DriverServiceFactory;
@@ -47,12 +44,12 @@ public class SearchControllerTest {
     @Test
     public void getWebSearchResults_validRequest_returnsApiResponse() throws Exception {
         // Mock
-        List<SearchResponse> response = new ArrayList<>();
-        SearchResponse res = new SearchResponse("mockTitle", "mockUrl");
-        response.add(res);
-        IBaseService baseService = new GoogleSearchService(null);
-        Mockito.doReturn(baseService).when(driverServiceFactory).getDriverService(DriverType.GOOGLE);
-        Mockito.doReturn(response).when(service).getResults(anyString(), anyInt());
+        IBaseService mockService = Mockito.mock(IBaseService.class);
+        Mockito.when(driverServiceFactory.getDriverService(Mockito.any(DriverType.class)))
+                .thenReturn(mockService);
+
+        Mockito.when(mockService.getResults(Mockito.anyString(), Mockito.anyInt()))
+                .thenReturn(ApiResponse.success("success", List.of(new SearchResponse("", ""))));
 
         // Assert
         mockMvc.perform(get("/api/v1/search")
@@ -60,7 +57,8 @@ public class SearchControllerTest {
                 .param("driver", "GOOGLE")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.message").value("Success"));
+                .andExpect(jsonPath("$.message").value("success"))
+                .andExpect(jsonPath("$.success").value(true));
     }
 
     @Test

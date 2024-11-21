@@ -1,10 +1,7 @@
 package com.r7b7.webscrybe.model;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
-
 import lombok.Data;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
 @Data
 public class ApiResponse<T> {
     private boolean success;

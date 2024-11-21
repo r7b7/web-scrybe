@@ -45,7 +45,7 @@ public class SearchController {
             @Parameter(description = "Max results to return", example = "10") @RequestParam(required = false, name = "max_count", defaultValue = "10") String maxCount) {
 
         IBaseService service = driverServiceFactory.getDriverService(driver);
-        List<SearchResponse> responseBody = service.getResults(query, Integer.valueOf(maxCount));
-        return new ResponseEntity<>(ApiResponse.success("Success", responseBody), HttpStatus.OK);
+        ApiResponse<List<SearchResponse>> responseBody = service.getResults(query, Integer.valueOf(maxCount));
+        return new ResponseEntity<>(responseBody, HttpStatus.OK);
     }
 }
