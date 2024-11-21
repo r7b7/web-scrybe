@@ -15,7 +15,7 @@ web-scrybe is an open-source web scraping tool built using Spring Boot. It provi
 
 ## Features
 
-- **Available API Integrations**: Currently, 3 searches are enabled. Google, Bing and Reddit Hot topic. More features will be added subsequently.
+- **Available API Integrations**: Currently, 4 web searches are enabled. Google, Bing, DuckDuckGo and Reddit Hot topic. More features will be added subsequently.
 - **Easy-to-use API**: Developers can quickly integrate web scraping functionality into their applications using the provided API.
 - **Scalable and Distributed**: The application is designed to be highly scalable and can be deployed in a distributed environment using Docker.
 - **Unlimited Scraping**: The automation-based approach doesn't have the same rate limits or charges as Paid APIs, allowing users to scrape data at scale without facing throttling or downtime.
@@ -38,7 +38,7 @@ web-scrybe is an open-source web scraping tool built using Spring Boot. It provi
 
 2. Navigate to the project directory
 
-3. Add Following Environment Variables (If not planning to use Reddit API then set these to empty strings)
+3. Add Following Environment Variables (Not required if not planning to use Reddit API)
     REDDIT_CLIENT_ID, REDDIT_CLIENT_SECRET, USER_AGENT
 
    Environment variables can be set in runtime configurations, yaml or property files. 
